@@ -51,3 +51,8 @@ import 'zone.js';  // Included with Angular CLI.
 /***************************************************************************************************
  * APPLICATION IMPORTS
  */
+
+ import structuredClone from '@ungap/structured-clone';
+ globalThis.structuredClone = structuredClone;
+
+ console.log('===>', globalThis.structuredClone({ x: 1 }));
